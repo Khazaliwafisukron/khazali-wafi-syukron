@@ -1,0 +1,243 @@
+/* ===== PENGATURAN DASAR ===== */
+:root {
+    --bg-color: #f9fbfd;        /* putih kebiruan, lembut */
+    --text-color: #2c3e50;      /* biru gelap elegan */
+    --primary-color: #0077b6;   /* biru utama (segar & profesional) */
+    --secondary-color: #e6f0f9; /* biru muda untuk background section */
+    --dark-gray: #34495e;       /* abu gelap elegan */
+}
+
+.logo {
+    text-decoration: none; /* hilangkan garis bawah */
+    color: #000; /* warna teks, bisa diganti */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar a {
+    text-decoration: none; /* hilangkan garis bawah */
+    color: #333;
+    padding: 0,3px 2px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #007bff; /* warna saat hover */
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ===== HEADER ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-left: 2rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 0 5%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image img {
+    max-width: 220px; /* gambar lebih kecil */
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 5px solid white;
+}
+
+/* ===== ABOUT ===== */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image img {
+    max-width: 300px; /* batasi ukuran */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== PROJECTS ===== */
+.projects {
+    background-color: var(--secondary-color);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 160px; /* supaya tidak terlalu tinggi */
+    object-fit: cover;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+    text-align: center;
+}
+
+.contact .email {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+}
+
+.social-links img {
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-gray);
+    color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column-reverse;
+    }
+    .hero-content {
+        text-align: center;
+    }
+    .hero-image img {
+        max-width: 180px;
+        margin-bottom: 2rem;
+    }
+    .about-content {
+        flex-direction: column-reverse;
+    }
+    .about-image img {
+        max-width: 220px;
+    }
+}
+
+/* ===== ABOUT ===== */
+.about h2 {
+    text-align: center;         /* judul ke tengah */
+    margin-bottom: 1rem;        /* jarak bawah lebih rapat */
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;                  /* rapatkan gap supaya tidak terlalu jauh */
+    margin-top: 1rem;           /* jarak atas lebih kecil */
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: justify;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem auto;
+    max-width: 700px;
+    text-align: center; /* biar teksnya di tengah */
+    font-size: 1rem;
+}
+
