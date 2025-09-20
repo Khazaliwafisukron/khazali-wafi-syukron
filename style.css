@@ -180,7 +180,7 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+     (max-width: 768px) {
     .hero-container {
         flex-direction: column-reverse;
     }
